@@ -1,0 +1,73 @@
+main > div {
+    border: 2px solid green;
+    margin: 2px;
+    padding: 2px;
+}
+
+main > div > div {
+    border: 2px solid brown;
+    margin: 2px;
+    padding: 2px;
+}
+
+.group1 + div {
+    color: blue;
+  }
+
+.group1 + div > div {
+    color: orange;
+  }
+
+.group1 + div + div {
+    color: red;
+  }
+
+.group1 ~ div {
+background-color: antiquewhite;
+}
+
+
+.mylist { 
+    color:blueviolet;
+}
+.mylist > li:nth-child(2n) {
+    background-color: aliceblue;
+}
+.mylist > li:nth-child(2n+1) {
+    background-color: whitesmoke ;
+}
+.mylist > li:nth-child(3n) {
+    font-weight: bold;
+}
+
+
+
+.emj {
+    background-color:blanchedalmond;
+}
+
+.emojify::before {
+    content: '😎 🥸 🤓';
+}
+
+.emojify::after {
+    content: '🤓 🥸 😎';
+}
+
+p::first-line {background-color: aquamarine;}
+
+
+[src] {
+    /* This will target any element that has a src attribute. */
+    padding: 10px;
+  }
+
+img[src] {
+    /* This will only target img elements that have a src attribute. */
+    background-color: bisque;
+  }
+
+img[src="i/puppy.jpeg"] {
+    /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+    border: 10px dashed green;
+  }

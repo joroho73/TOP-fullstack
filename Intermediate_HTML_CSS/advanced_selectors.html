@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+    <link href="stlye.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Advanced Selectors</h1>
+    <main class="parent">parent
+        <div class="child group1">child group1
+          <div class="grand-child group1">grand-child group1</div>
+        </div>
+        <div class="child group2">child group2
+          <div class="grand-child group2">grand-child group2</div>
+        </div>
+        <div class="child group3">child group3
+          <div class="grand-child group3">grand-child group3</div>
+        </div>
+      </main>
+      <div>
+<div>
+    <ul>
+        <li>> - the child combinator</li>
+        <li>+ - the adjacent sibling combinator</li>
+        <li>~ - the general sibling combinator</li>
+    </ul>
+</div>
+
+
+
+        <pre>
+main > div {
+    border: 2px solid green;
+    margin: 2px;
+    padding: 2px;
+}
+
+main > div > div {
+    border: 2px solid brown;
+    margin: 2px;
+    padding: 2px;
+}
+
+.group1 + div {
+    color: blue;
+    }
+
+.group1 + div > div {
+    color: orange;
+    }
+
+.group1 + div + div {
+    color: red;
+    }
+.group1 ~ div {
+    background-color: antiquewhite;
+    }
+        </pre>
+      </div>
+      <hr>
+      <h2>Pseudo-selectors and Pseudo-classes</h2>
+      <p>Pseudo-class selectors are prefixed with a single colon and are a different way to target elements that already exist in HTML. Pseudo-elements are prefixed with two colons and are used to target elements that don’t normally exist in the markup. If that doesn’t make sense straight away, don’t worry - we’ll explore some examples below.</p>
+      <ul class="mylist">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>item 8</li>
+        <li>item 9</li>
+        <li>item 10</li>
+      </ul>
+      <pre>
+.mylist { 
+    color:blueviolet;
+}
+.mylist > li:nth-child(2n) {
+    background-color: aliceblue;
+}
+.mylist > li:nth-child(2n+1) {
+    background-color: whitesmoke ;
+}
+.mylist > li:nth-child(3n) {
+    font-weight: bold;
+}
+      </pre>
+
+      <h2>Pseudo-elements</h2>
+      <p>While pseudo-classes give us an alternative way to interact with our HTML elements based on their state or structure, pseudo-elements are more abstract. They allow us to affect parts of our HTML that aren’t elements at all. These special elements share the same specificity as regular elements (0, 0, 0, 1). There are a number of useful pseudo-elements that can be utilized in any number of creative ways.</p>
+<pre class="emj">
+
+.emojify::before {
+    content: '😎 🥸 🤓';
+}
+
+.emojify::after {
+    content: '🤓 🥸 😎';
+}
+
+</pre>
+      <div>Let's <span class="emojify">emojify</span>this span!</div>
+<pre>
+    
+    <p>p::first-line {background-color: aquamarine;}</p>
+</pre>
+<h2>Attribute Selectors</h2>
+
+<img src="i/kitten.jpeg" alt="kitten"></img>
+
+<img src="i/puppy.jpeg" alt="puppy">
+
+<pre>
+[src] {
+    /* This will target any element that has a src attribute. */
+    padding: 10px;
+    }
+
+img[src] {
+    /* This will only target img elements that have a src attribute. */
+    background-color: bisque;
+    }
+
+img[src="i/puppy.jpeg"] {
+    /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+    border: 10px dashed green;
+    }
+</pre>
+
+    </body>
+</html>
