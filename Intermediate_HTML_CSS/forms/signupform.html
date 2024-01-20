@@ -6,14 +6,29 @@
     <title>Sign Up!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="container bdr">
-    <div class="bdr left-container">
+<body class="container">
+    <div class="left-container">
     <div class="title-container">
         <h1 class="customfont"><img src="../i/odin-lined.png" class="odin-logo"/>Odin</h1>
     </div>
     </div>
-    <div class="bdr right-container">
-        form
+    <div class="right-container">
+        <div class="form-header bdr">some text</div>
+        <form action="">
+        <div class="form-container bdr">
+            <div><label for="firstname">First Name<input type="text" id="firstname" name="firstname"></label></div>
+            <div><label for="lastname">Last Name<input type="text" id="lastname" name="lastname"></label></div>
+            <div><label for="email">Email Address<input type="email" id="email" name="email"></label></div>
+            <div><label for="phone">Phone Number<input type="tel" id="phone" name="phone"></label></div>
+            <div><label for="password">Password<input type="password" id="password" name="password"></label></div>
+            <div><label for="confirmpassword">Confirm Password<input type="password" id="confirmpassword" name="confirmpassword"></label></div>
+            
+        </div>
+        <div class="form-footer bdr">
+            <input type="submit">
+        </div>
+    </form>
+        
     </div>
 </body>
 </html>

@@ -11,7 +11,7 @@ html, body {
 }
 
 .bdr {
-    border: 0px solid burlywood;
+    border: 1px solid burlywood;
 }
 
 h1.customfont {
@@ -19,6 +19,20 @@ h1.customfont {
     font-family: 'TitleFont', Verdana, Geneva, Tahoma, sans-serif;
     padding: 0px;
     margin: 0px;
+}
+
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+
+  }
+
+  form li + li {
+    margin-top: 1em;
+  }
+
+label {
+    font-family: 'TitleFont', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
@@ -40,6 +54,9 @@ h1.customfont {
 .right-container {
     width: 60%;
     background-color: #93c8f2;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 .title-container {
@@ -59,4 +76,26 @@ h1.customfont {
 
 .odin-logo {
     height: 7.5rem;
+}
+
+.form-header {
+
+}
+.form-container {
+    height:fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.form-footer {
+
+}
+
+.formlist {
+    list-style : none;
+}
+
+.form-container div {
+    border: 1px solid red;
 }
